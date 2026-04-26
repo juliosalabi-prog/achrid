@@ -18,3 +18,5 @@ def register(request):
     return render(request, "register.html")
 from django.shortcuts import render
 
+def login_view(request):
+    return render(request, "login.html")
