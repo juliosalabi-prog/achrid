@@ -20,3 +20,9 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
 ]
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('abonnes/', views.liste_abonnes, name='liste_abonnes'),
+]

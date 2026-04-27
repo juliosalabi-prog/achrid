@@ -22,3 +22,9 @@ Abonne.objects.create(
         return redirect('home')  # après enregistrement
 
     return render(request, 'register.html')
+from django.shortcuts import render
+from .models import Abonne
+
+def liste_abonnes(request):
+    abonnes = Abonne.objects.all()
+    return render(request, 'abonnes.html', {'abonnes': abonnes})
