@@ -12,11 +12,12 @@ def register(request):
         email = request.POST.get('email')
         telephone = request.POST.get('telephone')
 
-        Abonne.objects.create(
-            nom=nom,
-            email=email,
-            telephone=telephone
-        )
+Abonne.objects.create(
+    nom=nom,
+    email=email,
+    telephone=telephone,
+    est_valide="@" in email if email else False
+)        )
 
         return redirect('home')  # après enregistrement
 

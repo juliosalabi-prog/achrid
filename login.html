@@ -1,5 +1,21 @@
-{% if error %}
-<p style="color:red;">{{ error }}</p>
-{% endif %}
-<button type="submit">Se connecter</button>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion</title>
+</head>
+<body>
+
+<h2>Se connecter</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="nom" placeholder="Nom">
+    <input type="email" name="email" placeholder="Email">
+    <input type="text" name="telephone" placeholder="Téléphone">
+
+    <button type="submit">Se connecter</button>
 </form>
+
+</body>
+</html>
