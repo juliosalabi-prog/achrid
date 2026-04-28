@@ -8,3 +8,4 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('abonnes/', views.liste_abonnes, name='liste_abonnes'),
 ]
+from accounts import views

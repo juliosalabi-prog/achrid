@@ -20,3 +20,9 @@ from django.shortcuts import render
 
 def login_view(request):
     return render(request, "login.html")
+from django.shortcuts import render
+from .models import Abonne
+
+def liste_abonnes(request):
+    abonnes = Abonne.objects.all()
+    return render(request, 'abonnes.html', {'abonnes': abonnes})
