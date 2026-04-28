@@ -1,0 +1,7 @@
+<h1>Liste des abonnés</h1>
+
+{% for a in abonnes %}
+    <p>{{ a.nom }} - {{ a.email }} - {{ a.telephone }}</p>
+{% empty %}
+    <p>Aucun abonné enregistré</p>
+{% endfor %}
