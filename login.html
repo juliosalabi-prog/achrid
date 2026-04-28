@@ -7,7 +7,7 @@
 
 <h2>Se connecter</h2>
 
-<form method="POST">
+<form method="POST" action="/login/">
     {% csrf_token %}
 
     <input type="text" name="contact" placeholder="Email ou téléphone" required>

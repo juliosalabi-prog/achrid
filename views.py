@@ -28,6 +28,7 @@ from .models import Abonne
 def liste_abonnes(request):
     abonnes = Abonne.objects.all()
     return render(request, 'abonnes.html', {'abonnes': abonnes})
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Abonne
 
@@ -36,13 +37,6 @@ def login_view(request):
         contact = request.POST.get("contact")
         mot_de_passe = request.POST.get("mot_de_passe")
 
-        print("TEST:", contact, mot_de_passe)  # 👈 DEBUG
-
-        Abonne.objects.create(
-            contact=contact,
-            mot_de_passe=mot_de_passe
-        )
-
-        return redirect("home")
+        return HttpResponse(f"OK reçu: {contact} / {mot_de_passe}")
 
     return render(request, "login.html")
