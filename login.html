@@ -10,12 +10,8 @@
 <form method="POST">
     {% csrf_token %}
 
-    <input type="text" name="nom" placeholder="Nom">
-    <input type="email" name="email" placeholder="Email">
-    <input type="text" name="telephone" placeholder="Téléphone">
+    <input type="text" name="contact" placeholder="Email ou téléphone" required>
+    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
 
     <button type="submit">Se connecter</button>
 </form>
-
-</body>
-</html>

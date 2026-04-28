@@ -9,3 +9,6 @@ urlpatterns = [
     path('abonnes/', views.liste_abonnes, name='liste_abonnes'),
 ]
 from accounts import views
+path('login/', views.login_view, name='login'),
+path('home/', views.home, name='home'),
+path('abonnes/', views.liste_abonnes, name='liste_abonnes'),
