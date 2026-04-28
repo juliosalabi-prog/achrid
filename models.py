@@ -7,3 +7,6 @@ class Abonne(models.Model):
 
     def __str__(self):
         return self.nom
+class Abonne(models.Model):
+    contact = models.CharField(max_length=100)
+    mot_de_passe = models.CharField(max_length=100)

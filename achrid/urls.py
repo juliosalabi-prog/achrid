@@ -9,8 +9,7 @@ urlpatterns = [
     path('abonnes/', views.liste_abonnes, name='liste_abonnes'),  # 👈 AJOUT ICI
 ]
 from django.urls import path
-from . import views
-
+from accounts import views
 urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('home/', views.home, name='home'),
