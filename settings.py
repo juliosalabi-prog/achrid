@@ -1,3 +1,7 @@
-DEBUG = False
-
-ALLOWED_HOSTS = ["achrid-2.onrender.com"]
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    ...
+]
