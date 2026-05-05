@@ -1,18 +1,7 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.http import HttpResponse
 
 def login_view(request):
     if request.method == "POST":
-        contact = request.POST.get("contact")
-        mot_de_passe = request.POST.get("mot_de_passe")
-
-        # ici on utilise le username = contact
-        user = authenticate(request, username=contact, password=mot_de_passe)
-
-        if user is not None:
-            login(request, user)
-            return redirect("home")
-        else:
-            return render(request, "login.html", {"error": "Identifiants incorrects"})
+        return HttpResponse("OK RECU")
 
     return render(request, "login.html")
