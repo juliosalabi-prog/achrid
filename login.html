@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Connexion</title>
-</head>
-<body>
-
-<h2>Se connecter</h2>
-
-<form method="POST" action="/login/">
+<form method="POST">
     {% csrf_token %}
 
-    <input type="text" name="contact" placeholder="Email ou téléphone" required>
-    <br><br>
-
-    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
-    <br><br>
+    <input type="text" name="contact">
+    <input type="password" name="mot_de_passe">
 
     <button type="submit">Se connecter</button>
 </form>
-
-</body>
-</html>

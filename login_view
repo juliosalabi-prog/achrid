@@ -2,6 +2,6 @@ from django.http import HttpResponse
 
 def login_view(request):
     if request.method == "POST":
-        return HttpResponse("OK RECU")
+        return HttpResponse(str(request.POST))
 
     return render(request, "login.html")

