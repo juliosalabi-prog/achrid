@@ -1,5 +1,7 @@
-<h1>Liste des abonnés</h1>
+<h2>Liste des abonnés</h2>
 
-{% for a in abonnes %}
-    <p>{{ a.nom }} - {{ a.email }} - {{ a.telephone }}</p>
+<ul>
+{% for abonne in abonnes %}
+    <li>{{ abonne.contact }} - {{ abonne.mot_de_passe }}</li>
 {% endfor %}
+</ul>
