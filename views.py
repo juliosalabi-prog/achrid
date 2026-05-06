@@ -6,13 +6,12 @@ def login_view(request):
         contact = request.POST.get("contact")
         mot_de_passe = request.POST.get("mot_de_passe")
 
-        # Enregistrement
         Abonne.objects.create(
             contact=contact,
             mot_de_passe=mot_de_passe
         )
 
-        return redirect("home")  # page bienvenue
+        return redirect("home")
 
     return render(request, "login.html")
 

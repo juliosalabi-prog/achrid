@@ -21,9 +21,7 @@ def login_view(request):
             contact=contact,
             mot_de_passe=mot_de_passe
         )
-
-        return redirect("liste_abonnes")
-
+    return redirect("home")
     return render(request, "login.html")
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
